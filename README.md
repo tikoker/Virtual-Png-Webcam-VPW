@@ -3,7 +3,7 @@ En- This is a program that outputs the microphone's voice using a virtual camera
 
  How to use it:
 Edit the pyvenv.cfg file. Configure the file paths.\
-Install python. Suitable version:3:12:5\
+Install python. Suitable version:3:12:5
 
 Sensitivity can be adjusted in the file cam.py\
 Sensitivity in parts- lines 11-10\
@@ -14,7 +14,7 @@ Ru- Это программ которая в виде раздатчика вы
 
  Как пользоватся:
 Отредактируйте файл pyvenv.cfg . Настройте пути к файлам.\
-Установите python. Подходящая версия:3:12:5\
+Установите python. Подходящая версия:3:12:5
 
 Чуствительность можно настроить в файле cam.py:\
 Чуствительность по честям- строки 11-10\
