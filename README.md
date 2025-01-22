@@ -8,7 +8,7 @@ Sensitivity can be adjusted in the file cam.py
 Sensitivity in parts- lines 11-10 
   Total- line 50
 
-# Virtual Png Webcam-VPW 
+# Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru- Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры.
 
 Как пользоватся:
