@@ -7,7 +7,8 @@ Install python. Suitable version:3:12:5
 
 Sensitivity can be adjusted in the file cam.py\
 Sensitivity in parts- lines 11-10\
-Total- line 50
+Total- line 50\
+Background selection- line 22
 
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru- Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры.
@@ -18,5 +19,8 @@ Ru- Это программ которая в виде раздатчика вы
 
 Чуствительность можно настроить в файле cam.py:\
 Чуствительность по честям- строки 11-10\
-Общая- строка 50
+Общая- строка 50\
+Выбор фона- строка 22
+
+
 
