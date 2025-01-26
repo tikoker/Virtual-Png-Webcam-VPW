@@ -1,3 +1,4 @@
+import json
 import sounddevice as sd
 import numpy as np
 from PIL import Image
@@ -5,21 +6,24 @@ import threading
 import pyvirtualcam
 import random
 
+# Загружаем конфигурацию из файла
+def load_config(file_path="config.json"):
+    with open(file_path, "r") as f:
+        return json.load(f)
+
 # List of images
 frames_data = [
-    {"path": "image1.gif", "threshold": None},  # GIF is always active
-    {"path": "image2.png", "threshold": 2},  # Threshold for image2
+    {"path": "image1.gif", "threshold": None},
+    {"path": "image2.png", "threshold": 2},
     {"path": "image4.png", "threshold": 3},
     {"path": "image5.png", "threshold": 6}
 ]
+original_images = [Image.open(frame["path"]).convert("RGBA") for frame in frames_data]
 
 # Variables to store the current frame and GIF status
 current_frame = 0
 is_gif_active = True
 frame_lock = threading.Lock()
-
-# Setting: whether to use a green background
-use_green_background = False  # Change to True if a green background is needed
 
 # Preloading images
 original_images = []
@@ -27,14 +31,27 @@ for frame in frames_data:
     img = Image.open(frame["path"]).convert("RGBA")
     original_images.append(img)
 
+# Применение настроек из конфигурационного файла
+config = load_config()
+
 # Loading the eyes image (eyes.png)
 eyes_image = Image.open("eyes.png").convert("RGBA")
 
-# Creating a green background
-green_background = Image.new("RGBA", original_images[0].size, (0, 255, 0, 255))
+# Цвет фона (по умолчанию зеленый, если значение некорректное)
+use_green_background = config.get("background_color", "green") == "green"
 
-# Creating a black background (DS)
-black_background = Image.new("RGBA", original_images[0].size, (30, 31, 34, 1))
+# Цвет кастомного фона RGBA (используется только если определён)
+custom_background_rgba = config.get("custom_background_rgba", None)
+
+# Создание стандартных фонов
+green_background = Image.new("RGBA", original_images[0].size, (0, 255, 0, 255))
+gray_background = Image.new("RGBA", original_images[0].size, (30, 31, 34, 255))
+
+# Выбор фона на основе настроек
+if custom_background_rgba:
+    custom_background = Image.new("RGBA", original_images[0].size, tuple(custom_background_rgba))
+else:
+    custom_background = None
 
 # Audio frame processing function
 def audio_callback(indata, frames, time, status):
@@ -54,8 +71,7 @@ def audio_callback(indata, frames, time, status):
             is_gif_active = True  # Otherwise, the GIF remains active
 
 # Setting audio parameters
-sd.default.samplerate = 44100
-sd.default.channels = 1
+sd.default.samplerate = config.get("samplerate", 44100)
 
 # Starting the audio stream
 stream = sd.InputStream(callback=audio_callback)
@@ -81,47 +97,50 @@ def send_to_virtual_cam(images):
             with frame_lock:
                 current_frame_data = original_images[current_frame]
 
-            # If the green background is enabled, create it; otherwise, create a black background
-            if use_green_background:
+            # Выбор базового изображения
+            if custom_background:
+                base_image = custom_background.copy()
+            elif use_green_background:
                 base_image = green_background.copy()
             else:
-                base_image = black_background.copy()
+                base_image = gray_background.copy()  # Используем серый фон, если зеленый не выбран
 
-            # If the GIF is active, add it to the base image
+            # Если GIF активен, добавляем его поверх базового изображения
             if is_gif_active:
                 base_image = Image.alpha_composite(base_image, original_images[0])
 
-            # Overlay the current frame on top of the base image
+            # Наложение текущего кадра поверх базового изображения
             base_image = Image.alpha_composite(base_image, current_frame_data)
 
-            # Resize the eyes image to match the background size
+            # Изменение размера изображения глаз
             eyes_resized = eyes_image.resize(base_image.size, Image.Resampling.LANCZOS)
 
-            # Managing the visibility of eyes
-            time_since_last_disappear += 1 / 30  # Update the timer (30 FPS)
+            # Управление видимостью глаз
+            time_since_last_disappear += 1 / 30  # Обновление таймера (30 FPS)
             if not eyes_visible:
                 if time_since_last_disappear >= disappear_duration:
-                    # Eyes reappear
+                    # Глаза появляются
                     eyes_visible = True
                     time_since_last_disappear = 0
                     next_disappear_time = random.randint(60 // disappear_count_per_minute, 60 // disappear_count_per_minute * 2)
                     disappear_duration = random.uniform(min_disappear_time, max_disappear_time)
             else:
                 if time_since_last_disappear >= next_disappear_time:
-                    # Eyes disappear
+                    # Глаза исчезают
                     eyes_visible = False
                     time_since_last_disappear = 0
 
-            # Overlay the eyes on top of all images if they are visible
+            # Наложение глаз на итоговое изображение, если они видимы
             if eyes_visible:
                 base_image = Image.alpha_composite(base_image, eyes_resized)
 
-            # Convert the image to RGB for sending to the virtual camera
+            # Конвертация изображения в RGB для отправки в виртуальную камеру
             frame = np.array(base_image.convert("RGB"))
 
-            # Send the current frame to the virtual webcam
+            # Отправка текущего кадра в виртуальную камеру
             cam.send(frame)
             cam.sleep_until_next_frame()
+
 
 # Create and start a thread for sending images to the virtual webcam
 cam_thread = threading.Thread(target=send_to_virtual_cam, args=(original_images,))
