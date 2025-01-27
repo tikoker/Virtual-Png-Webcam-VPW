@@ -1,14 +1,19 @@
 # Virtual Png Webcam-VPW 
-En- This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
+This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
 
-•How to use it:
-Edit the pyvenv.cfg file. Configure the file paths.\
-Install python. Suitable version:3.12.5
+  How to use it:\
+Disable pyvenv.cfg, install python 3.12.5 in the root folder, or use the paths to the one installed on your system.\
+The corresponding parameters are saved in config.json
 
-•Sensitivity can be adjusted in the file cam.py:\
-Sensitivity in parts- lines 11-10\
-Total- line 50\
-Background selection- line 22
+"background_color" the choice is one of the standard colors "green ; gray"\
+""custom_background_rgba" is a custom color in the "RGBA" format, either there is nothing there, or it is not used for use from "background_color"
+
+Here is an example of the settings:\
+{\
+"background_color": "gray",\
+    ""custom_background_rgb": [],\
+""sampling rate": 44100,\
+}
 
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru- Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры.
