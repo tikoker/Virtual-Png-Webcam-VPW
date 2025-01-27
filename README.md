@@ -1,7 +1,7 @@
 # Virtual Png Webcam-VPW 
 En-This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
 
-°How to use it:\
+&emsp;How to use it:\
 Disable pyvenv.cfg, install python 3.12.5 in the root folder, or use the paths to the one installed on your system.\
 The corresponding parameters are saved in config.json
 
