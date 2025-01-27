@@ -11,8 +11,8 @@ The corresponding parameters are saved in config.json
 Here is an example of the settings:\
 {\
 &emsp;"background_color": "gray",\
-&emsp;""custom_background_rgb": [],\
-&emsp;""sampling rate": 44100,\
+&emsp;"custom_background_rgb": [],\
+&emsp;"sampling rate": 44100,\
 }
 
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)\
