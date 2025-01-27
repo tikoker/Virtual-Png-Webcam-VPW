@@ -6,13 +6,16 @@ Disable pyvenv.cfg, install python 3.12.5 in the root folder, or use the paths t
 The corresponding parameters are saved in config.json
 
 "background_color" the choice is one of the standard colors "green ; gray"\
-""custom_background_rgba" is a custom color in the "RGBA" format, either there is nothing there, or it is not used for use from "background_color"
+"custom_background_rgba" is a custom color in the "RGBA" format, either there is nothing there, or it is not used for use from "background_color"\
+"old_Version" -The ability to use a texture that appeared in versions: 1.2.1/1.5 (true/false)
 
-Here is an example of the settings:\
+Here is an example of the settings:
+
 {\
 &emsp;"background_color": "gray",\
 &emsp;"custom_background_rgb": [],\
 &emsp;"sampling rate": 44100,\
+&emsp;"old_Version": true\
 }
 
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
@@ -23,14 +26,16 @@ Ru-Это программ которая в виде раздатчика вы�
 Основные параметры хранятся в config.json
 
 "background_color" выбор -одного из стандартных цветов "green ; gray"\
-"custom_background_rgba" -кастомный цвет в формате "RGBA", если там ничего нету или несуществующйи цвет то будет использоватся из "background_color"
+"custom_background_rgba" -кастомный цвет в формате "RGBA", если там ничего нету или несуществующйи цвет то будет использоватся из "background_color"\
+"old_Version" -Возможность использовать текстуру которая появилась в версиях: 1.2.1/1.5	(true/false)
 
 Вот пример настроек:
 
 {\
 &emsp;"background_color": "gray",\
-&emsp;"custom_background_rgba": [],\
-&emsp;"samplerate": 44100,\
+&emsp;"custom_background_rgb": [],\
+&emsp;"sampling rate": 44100,\
+&emsp;"old_Version": true\
 }
 
 
