@@ -10,9 +10,9 @@ The corresponding parameters are saved in config.json
 
 Here is an example of the settings:\
 {\
-  "background_color": "gray",\
-  ""custom_background_rgb": [],\
-  ""sampling rate": 44100,\
+&emsp;"background_color": "gray",\
+&emsp;""custom_background_rgb": [],\
+&emsp;""sampling rate": 44100,\
 }
 
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)\
@@ -27,9 +27,9 @@ Ru-Это программ которая в виде раздатчика вы�
 Вот пример настроек:
 
 {\
-    "background_color": "gray",\
-    "custom_background_rgba": [],\
-    "samplerate": 44100,\
+&emsp;"background_color": "gray",\
+&emsp;"custom_background_rgba": [],\
+&emsp;"samplerate": 44100,\
 }
 
 
