@@ -42,3 +42,4 @@ Ru-Это программ которая в виде раздатчика вы�
 
 ![image1](https://github.com/user-attachments/assets/ff5ac38f-828b-4f26-b946-7fe0b6ecc8ef)
 
+![Dropper](https://github.com/user-attachments/assets/1f5e5693-a956-4296-8c31-04ab6826679d)
