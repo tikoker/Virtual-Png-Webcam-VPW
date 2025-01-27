@@ -15,7 +15,7 @@ Here is an example of the settings:\
 &emsp;"sampling rate": 44100,\
 }
 
-# Virtual Png Webcam-VPW (Виртуальная пнг вебка)\
+# Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru-Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры. 
 
 &emsp;Как пользоватся:\
