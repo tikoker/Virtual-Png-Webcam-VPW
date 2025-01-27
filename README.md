@@ -41,3 +41,4 @@ Ru-Это программ которая в виде раздатчика вы�
 
 
 ![image1](https://github.com/user-attachments/assets/ff5ac38f-828b-4f26-b946-7fe0b6ecc8ef)
+
