@@ -6,8 +6,6 @@ import threading
 import pyvirtualcam
 import random
 
-
-
 # Load configuration from the file
 def load_config(file_path="config.json"):
     with open(file_path, "r") as f:
@@ -22,9 +20,9 @@ base_folder = "oldVersion" if config.get("old_Version", False) else "defaultVers
 # Load images based on the selected folder
 frames_data = [
     {"path": f"{base_folder}/image1.gif", "threshold": None},
-    {"path": f"{base_folder}/image2.png", "threshold": 2},
-    {"path": f"{base_folder}/image4.png", "threshold": 3},
-    {"path": f"{base_folder}/image5.png", "threshold": 6}
+    {"path": f"{base_folder}/image2.png", "threshold": 1},
+    {"path": f"{base_folder}/image4.png", "threshold": 2},
+    {"path": f"{base_folder}/image5.png", "threshold": 3}
 ]
 
 # Preloading images
@@ -97,6 +95,7 @@ def audio_callback(indata, frames, time, status):
 
 # Setting audio parameters
 sd.default.samplerate = config.get("samplerate", 44100)
+sd.default.device = config.get("microphone_index", None)  # Use the selected microphone
 
 # Starting the audio stream
 stream = sd.InputStream(callback=audio_callback)
