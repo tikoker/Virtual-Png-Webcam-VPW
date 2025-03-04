@@ -2,7 +2,7 @@
 En-This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
 
 &emsp;How to use it:\
-Install python 3.12.5 in the root folder, or use the paths to the one installed on your system.\
+Install python 3.12.5\
 The corresponding parameters are saved in config.json\
 Run settings.bat and choose your microphone
 
@@ -24,7 +24,7 @@ Here is an example of the settings:
 Ru-Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры. 
 
 &emsp;Как пользоватся:\
-Утановилите python 3.12.5 в коренвую папку или измените пути к установленному в вашей системе\
+Утановилите python 3.12.5\
 Основные параметры хранятся в config.json\
 Запустите settings.bat и выбере ваш микрофон
 
