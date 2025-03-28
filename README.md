@@ -1,7 +1,7 @@
 # Virtual Png Webcam-VPW 
 En-This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
 
-&emsp;To run the program, run settings.bat and select your microphone in the parameter microphone_index
+&emsp;*To run the program, run settings.bat and select your microphone in the parameter microphone_index
 
 Information on the config.json file:\
 "background_color" -selecting one of the standard colors "green ; gray"\
@@ -23,7 +23,7 @@ Example of config.json settings:
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru-Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры. 
 
-&emsp;Для работы программы запустите settings.bat и выбере ваш микрофон в параметре microphone_index
+&emsp;*Для работы программы запустите settings.bat и выбере ваш микрофон в параметре microphone_index
 
 Информация по файлу config.json:\
 "background_color" -выбор одного из стандартных цветов "green ; gray"\
