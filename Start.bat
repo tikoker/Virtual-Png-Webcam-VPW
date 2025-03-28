@@ -1,1 +1,1 @@
-venv\Scripts\python.exe cam.py
+.\python\python.exe cam.py

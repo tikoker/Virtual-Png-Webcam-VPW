@@ -1,3 +1,13 @@
+import sys
+import os
+
+# Путь к папке с библиотеками
+libs_path = os.path.join(os.path.dirname(__file__), "libs")
+
+# Добавляем в sys.path (если ещё не добавлен)
+if libs_path not in sys.path:
+    sys.path.insert(0, libs_path)  # Приоритет выше стандартных путей
+
 import json
 import sounddevice as sd
 import numpy as np
