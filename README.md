@@ -1,16 +1,16 @@
 # Virtual Png Webcam-VPW 
 En-This is a program that outputs the microphone's voice using a virtual camera in the form of a distributor.
 
-&emsp;How to use it:\
-Install python 3.12.5\
-The corresponding parameters are saved in config.json\
-Run settings.bat and choose your microphone
+&emsp;To run the program, run settings.bat and select your microphone in the parameter microphone_index
 
-"background_color" the choice is one of the standard colors "green ; gray"\
-"custom_background_rgba" is a custom color in the "RGBA" format, either there is nothing there, or it is not used for use from "background_color"\
-"old_Version" -The ability to use a texture that appeared in versions: 1.2.1/1.5 (true/false)
+Information on the config.json file:\
+"background_color" -selecting one of the standard colors "green ; gray"\
+""custom_background_rgba" -custom color in the "RGBA/RGB" format, if there is nothing there or a non-existent color, it will be used from "background_color"\
+"samplerate" - Sampling frequency\
+"old_Version" - The ability to use the texture that appeared in minecraft versions: 1.2.1 and 1.5 (true/false)\
+"microphone_index" - the current microphone used
 
-Here is an example of the settings:
+Example of config.json settings:
 
 {\
 &emsp;"background_color": "gray",\
@@ -23,16 +23,16 @@ Here is an example of the settings:
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru-Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры. 
 
-&emsp;Как пользоватся:\
-Утановилите python 3.12.5\
-Основные параметры хранятся в config.json\
-Запустите settings.bat и выбере ваш микрофон
+&emsp;Для работы программы запустите settings.bat и выбере ваш микрофон в параметре microphone_index
 
-"background_color" выбор -одного из стандартных цветов "green ; gray"\
-"custom_background_rgba" -кастомный цвет в формате "RGBA", если там ничего нету или несуществующйи цвет то будет использоватся из "background_color"\
-"old_Version" -Возможность использовать текстуру которая появилась в версиях: 1.2.1/1.5	(true/false)
+Информация по файлу config.json:\
+"background_color" -выбор одного из стандартных цветов "green ; gray"\
+"custom_background_rgba" -кастомный цвет в формате "RGBA/RGB", если там ничего нету или несуществующйи цвет то будет использоватся из "background_color"\
+"samplerate" -Частота дискретизации\
+"old_Version" -Возможность использовать текстуру которая появилась в версиях майкрафт: 1.2.1 и 1.5	(true/false)\
+"microphone_index" -текущий используемый микрофон 
 
-Вот пример настроек:
+Пример настроек config.json:
 
 {\
 &emsp;"background_color": "gray",\
