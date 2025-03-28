@@ -1,0 +1,17 @@
+pyvirtualcam-0.12.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+pyvirtualcam-0.12.1.dist-info/LICENSE,sha256=GJsa-V1mEVHgVM6hDJGz11Tk3k0_7PsHTB-ylHb3Fns,18431
+pyvirtualcam-0.12.1.dist-info/METADATA,sha256=HV-PGHJG0ZFi8GnkcJTChWek8OLNTm0fzp0LCDTgH3Q,5606
+pyvirtualcam-0.12.1.dist-info/RECORD,,
+pyvirtualcam-0.12.1.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyvirtualcam-0.12.1.dist-info/WHEEL,sha256=agy-BJge3afXwWznUXANATmKFW4eqelqRR0uf608A_0,99
+pyvirtualcam-0.12.1.dist-info/top_level.txt,sha256=KQx1d-fCmPSs6x5SfMnxPkS-3KbN8cd5DIyOQjgFAhI,13
+pyvirtualcam/__init__.py,sha256=Il9WGnrCsNix0BE3Iye4wy4ebcpotesFHL6eCUP_Zhg,105
+pyvirtualcam/__pycache__/__init__.cpython-39.pyc,,
+pyvirtualcam/__pycache__/_version.cpython-39.pyc,,
+pyvirtualcam/__pycache__/camera.cpython-39.pyc,,
+pyvirtualcam/__pycache__/util.cpython-39.pyc,,
+pyvirtualcam/_native_windows_obs.cp39-win_amd64.pyd,sha256=NS_121Fk9gIrpWuwbpFRAJo4bcBIhx_xBN-2YvPg934,161280
+pyvirtualcam/_native_windows_unity_capture.cp39-win_amd64.pyd,sha256=pWpV-QI5XJP7wp-_UvJTCrCwEf8PTGJg3Z73N-lkums,168960
+pyvirtualcam/_version.py,sha256=F0iasyREt0BVsyWwfXRGrwYlGk2QbqYI4wVXD-ik1oY,24
+pyvirtualcam/camera.py,sha256=-ar0uyMXCdAS7ET98d8jwoPj15d2bZAaV15zyhm-1E4,13755
+pyvirtualcam/util.py,sha256=tngBMSbLUiZoJEPPs3tDxj5ivvd95gFlN1NBKYF7CxE,996
