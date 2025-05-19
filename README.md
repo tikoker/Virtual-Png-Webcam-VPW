@@ -20,6 +20,8 @@ Example of config.json settings:
 &emsp;"microphone_index": 3\
 }
 
+Thanks to 1wm9k for the first version of VPW (>'-'<)
+
 # Virtual Png Webcam-VPW (Виртуальная пнг вебка)
 Ru-Это программ которая в виде раздатчика выводит выводит голос микрофона с помощю виртуальной камеры. 
 
@@ -42,7 +44,7 @@ Ru-Это программ которая в виде раздатчика вы�
 &emsp;"microphone_index": 3\
 }
 
-
+Спасибо 1wm9k за первую версию VPW (>'-'<)
 
 ![image1](https://github.com/user-attachments/assets/ff5ac38f-828b-4f26-b946-7fe0b6ecc8ef)
 
